@@ -2,8 +2,7 @@ import pool from "@/database/db";
 
 export const GetAll = async () => {
   const query = ` SELECT  Id, Chave, Descricao, QtdMensal, Acessos, DtLimite 
-                  FROM    tb_JusCopier
-                  `;
+                  FROM    tb_JusCopier`;
   try {
     await pool.connect();
     const result = await pool.request().query(query);
