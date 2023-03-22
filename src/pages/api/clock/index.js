@@ -20,13 +20,13 @@ export default async (req, res) => {
       const dtDate = dtFull_ISO.split(' ')[0];
 
       // create variable in format HH:MM:SS
-      const dtHour = dtFull_ISO.split(' ')[1].split('.')[0];
+      const dtTime = dtFull_ISO.split(' ')[1].split('.')[0];
 
       res.status(200).json({
         dtFull_ISO,
         dtFull,
         dtDate,
-        dtHour,
+        dtTime,
       });
       break;
     default:
