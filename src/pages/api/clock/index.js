@@ -1,6 +1,5 @@
 export default async (req, res) => {
   const { method } = req;
-
   res.setHeader("Allow", ["GET"]);
   res.setHeader("Content-Type", "application/json");
   res.setHeader("Cache-Control", "no-store");
