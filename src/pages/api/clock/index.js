@@ -17,10 +17,10 @@ export default async (req, res) => {
       const dtFull_ISO = dtAgora.toISOString()
 
       // create variable in format YYYY-MM-DD
-      const dtDate = dtFull_ISO.split(' ')[0];
+      const dtDate = dtFull_ISO.split('T')[0];
 
       // create variable in format HH:MM:SS
-      const dtTime = dtFull_ISO.split(' ')[1].split('.')[0];
+      const dtTime = dtFull_ISO.split('T')[1].split('.')[0];
 
       res.status(200).json({
         dtFull_ISO,
