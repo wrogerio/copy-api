@@ -10,11 +10,8 @@ export default async (req, res) => {
       // dtAgora
       const dtAgora = new Date();
 
-      // remove 3 hours from dtAgora
-      dtAgora.setHours(dtAgora.getHours() - 3);
-
       // convert to DD/MM/YYYY HH:MM:SS
-      const dtFull = dtAgora.toLocaleString('pt-BR').replace(', ', ' ');
+      const dtFull = dtAgora.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }).replace(', ', ' ');
 
       // create variable in format YYYY-MM-DD HH:MM:SS
       const dtFull_ISO = dtAgora.toISOString()
