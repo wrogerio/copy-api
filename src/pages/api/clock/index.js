@@ -1,6 +1,11 @@
 export default async (req, res) => {
   const { method } = req;
 
+  res.setHeader("Allow", ["GET"]);
+  res.setHeader("Content-Type", "application/json");
+  res.setHeader("Cache-Control", "no-store");
+  res.setHeader("Access-Control-Allow-Origin", "*");
+
   switch (method) {
     case "GET":
       // dtAgora
@@ -26,7 +31,6 @@ export default async (req, res) => {
       });
       break;
     default:
-      res.setHeader("Allow", ["GET"]);
       res.status(405).end(`Method ${method} Not Allowed`);
   }
 };
