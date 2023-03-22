@@ -14,7 +14,7 @@ export default async (req, res) => {
       const dtFull = dtAgora.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }).replace(', ', ' ');
 
       // create variable in format YYYY-MM-DD HH:MM:SS
-      const dtFull_ISO = dtAgora.toISOString().replace('T', ' ');
+      const dtFull_ISO = dtAgora.toISOString()
 
       // create variable in format YYYY-MM-DD
       const dtDate = dtFull_ISO.split(' ')[0];
